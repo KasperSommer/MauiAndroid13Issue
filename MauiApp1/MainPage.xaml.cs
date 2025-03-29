@@ -1,4 +1,6 @@
-﻿namespace MauiApp1;
+﻿using CommunityToolkit.Maui.Views;
+
+namespace MauiApp1;
 
 public partial class MainPage : ContentPage
 {
@@ -19,6 +21,13 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
+	}
+
+	private void Popup1Button_Clicked(object sender, EventArgs e)
+	{
+		var popup = new Popup1();
+
+		this.ShowPopup(popup);
 	}
 }
 
